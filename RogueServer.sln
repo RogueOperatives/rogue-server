@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RogueServer.Api", "RogueSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RogueServer.Api.Host", "RogueServer.Api.Host\RogueServer.Api.Host.csproj", "{14E62BA6-A202-4A64-9F42-082341DED8B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication3", "WebApplication3\WebApplication3.csproj", "{93332FEF-5904-47C3-A349-BEC4F0898E2B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{14E62BA6-A202-4A64-9F42-082341DED8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E62BA6-A202-4A64-9F42-082341DED8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E62BA6-A202-4A64-9F42-082341DED8B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93332FEF-5904-47C3-A349-BEC4F0898E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93332FEF-5904-47C3-A349-BEC4F0898E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93332FEF-5904-47C3-A349-BEC4F0898E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93332FEF-5904-47C3-A349-BEC4F0898E2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
