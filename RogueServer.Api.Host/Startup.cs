@@ -38,7 +38,8 @@ namespace RogueServer.Api.Host
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+            app.UseMvc()
+               .UseCors((builder) => builder.AllowAnyOrigin().Build());
         }
     }
 }
