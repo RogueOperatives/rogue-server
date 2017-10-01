@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,17 +26,26 @@ namespace RogueServer.Api.Host
         {
             // Add framework services.
             services.AddMvc()
-                    .AddApplicationPart(typeof(UnitsController).GetTypeInfo().Assembly);
+                    .AddApplicationPart(typeof(UnitsController).GetTypeInfo()
+                                                               .Assembly);
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app,
+                              IHostingEnvironment env,
+                              ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc()
-               .UseCors((builder) => builder.AllowAnyOrigin().Build());
+            app.UseCors((builder) => builder.AllowAnyOrigin()
+                                            .AllowAnyMethod()
+                                            .AllowAnyHeader()
+                                            .AllowCredentials()
+                                            .Build())
+               .UseMvc();
         }
     }
 }
