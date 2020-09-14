@@ -1,3 +1,3 @@
 # RogueServer
 
-Server for RogueOperatives.
+Server for Rogue Operatives.
